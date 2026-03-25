@@ -10,7 +10,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 
     <div className='bg-tertiary p-5 rotate-2 hover:rotate-0 transition-all duration-300 ease-in-out rounded-2xl sm:w-[360px] w-full'>
       <div className='relative w-full h-[230px]'>
-        <img src={image} alt={name} className='w-full h-full object-cover rounded-2xl' />
+        <img src={image} alt={name} className='w-full h-full object-fill rounded-2xl' />
         <div className='absolute inset-0 flex justify-end m-2 gap-1'>
           <div onClick={() => window.open(source_code_link, '_blank')} className='black-gradient w-9 h-9 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out'>
             <img src={github} alt='github' className='w-2/3 h-2/3 object-contain' />

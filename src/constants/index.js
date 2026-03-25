@@ -27,6 +27,7 @@ import {
   studio,
   varnda,
   gymgenius,
+  crypto_radar,
 } from "../assets";
 
 export const navLinks = [
@@ -169,34 +170,25 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 const projects = [
+  {
+    name: "Crypto Radar",
+    description:"A responsive crypto tracking app built with React, Vite, and TypeScript. It fetches real-time data from the CoinGecko API with pagination, search functionality, and a clean user interface for smooth browsing.",
+    tags: [
+      {
+        name: "react-vite",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      
+    ],
+    image: crypto_radar,
+    source_code_link: "https://github.com/MoZaher2/crypto-coins",
+    live_demo_link: "https://crypto-coins-three.vercel.app/",
+  },
   {
     name: "Varnda",
     description:"The project was created using the react and bootstrap frameworks and contains pages to publish your property, browse other real estate ads, articles about real estate, and a dashboard to manage the entire site.",
@@ -391,4 +383,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

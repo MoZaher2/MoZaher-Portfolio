@@ -35,6 +35,7 @@ import KasperTemplete from "./project/KasperTemplete.png"
 import studio from "./project/studio.png"
 import varnda from "./project/varnda.png"
 import gymgenius from "./project/gymgenius.png"
+import crypto_radar from "./project/crypto-radar.png"
 
 export {
   logo,
@@ -70,4 +71,5 @@ export {
   studio,
   varnda,
   gymgenius,
+  crypto_radar,
 };

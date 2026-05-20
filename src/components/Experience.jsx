@@ -61,3 +61,14 @@ const Experience = () => {
 }
 
 export default Experience
+
+import PropTypes from "prop-types";
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    date: PropTypes.string,
+    icon: PropTypes.string,
+    company_name: PropTypes.string,
+    title: PropTypes.string,
+    points: PropTypes.arrayOf(PropTypes.string),
+  }),
+};

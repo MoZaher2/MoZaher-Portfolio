@@ -5,7 +5,6 @@ import { services } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 
 
-
 const ServiceCard = ({ index, title, describe, icon }) => {
   return (
     <Tilt className='xs:w-[250px] w-full' options={{
@@ -50,3 +49,13 @@ const About = () => {
 }
 
 export default About
+
+
+
+import PropTypes from "prop-types";
+ServiceCard.propTypes = {
+  index: PropTypes.number,
+  title: PropTypes.string,
+  describe: PropTypes.string,
+  icon: PropTypes.node,
+};

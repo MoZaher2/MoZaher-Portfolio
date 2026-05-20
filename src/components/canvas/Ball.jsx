@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei"
-// import CanvasLoader from "../Loader"
+
 
 const Ball = ({ imgUrl }) => {
   const [decal] = useTexture([imgUrl])
@@ -44,3 +44,12 @@ const BallCanvas = ({ icon, name }) => {
 }
 
 export default BallCanvas
+
+import PropTypes from "prop-types";
+BallCanvas.propTypes = {
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+Ball.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+};

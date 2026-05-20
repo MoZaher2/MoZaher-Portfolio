@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { navLinks } from "../constants"
 import { styles } from "../styles"
 import { logo, menu, close } from '../assets'
-import { motion } from "framer-motion"
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(true)
   const [active, setActive] = useState("")
@@ -42,15 +42,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
-      {/* <div className="fixed z-50 right-1 bottom-1">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-tertiary  md:border-secondary flex justify-center items-start p-2">
-            <motion.div animate={{ y: [0, 24, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, repeatType: 'loop' }} className="w-3 h-3 rounded-full bg-tertiary md:bg-secondary"></motion.div>
-          </div>
-        </a>
-      </div> */}
     </nav>
   )
 }

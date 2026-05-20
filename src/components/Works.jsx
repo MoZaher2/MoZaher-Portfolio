@@ -1,4 +1,3 @@
-import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { github, demo } from '../assets'
@@ -59,3 +58,17 @@ const Works = () => {
 }
 
 export default Works
+
+import PropTypes from "prop-types";
+ProjectCard.propTypes = {
+  index: PropTypes.number,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    color: PropTypes.string
+  })),
+  image: PropTypes.string,
+  source_code_link: PropTypes.string,
+  live_demo_link: PropTypes.string
+};

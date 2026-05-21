@@ -16,35 +16,60 @@ const Hero = () => {
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>Hi, I&apos;m <span className="text-[#915eff]">Mo Zaher</span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}> I &apos;m a web developer <br className="sm:block hidden" />(FullStack)
+            <p className={`${styles.heroSubText} mt-2 text-white-100`}> I &apos;m a web developer <br className="sm:block hidden" />(ReactJS • NextJS)
             </p>
 
-            <div className="flex gap-8 mt-10 flex-col sm:flex-row items-center">
-              <div className="flex gap-8 text-[30px]">
-                <a href="https://github.com/MoZaher2" target="_blank" rel="noopener noreferrer" >
-                  <div className="w-[40px] h-[40px] bg-tertiary rounded-xl flex justify-center items-center cursor-pointer shadow-md shadow-[#915eff] transition-all duration-300 ease-in-out">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </div>
+            <div className="flex gap-6 mt-10 flex-col sm:flex-row items-stretch sm:items-center">
+              {/* Social Media Links */}
+              <div className="flex gap-4 text-[20px]">
+                <a
+                  href="https://github.com/MoZaher2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-12 h-12 bg-tertiary border border-white/5 rounded-2xl flex justify-center items-center cursor-pointer hover:bg-white hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300 ease-in-out"
+                >
+                  <FontAwesomeIcon icon={faGithub} className="text-white group-hover:text-black transition-colors duration-300" />
                 </a>
-                <a href="https://linkedin.com/in/mohamed-zaher-83678a316" target="_blank" rel="noopener noreferrer">
-                  <div className="w-[40px] h-[40px] bg-tertiary rounded-xl flex justify-center items-center cursor-pointer shadow-[#915eff] shadow-md transition-all duration-300 ease-in-out">
-                    <FontAwesomeIcon icon={faLinkedin} className="text-blue-500" />
-                  </div>
+                <a
+                  href="https://www.linkedin.com/in/mohamedzaher-dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-12 h-12 bg-tertiary border border-white/5 rounded-2xl flex justify-center items-center cursor-pointer hover:bg-[#0077b5] hover:border-[#0077b5] hover:shadow-[0_0_20px_rgba(0,119,181,0.4)] transition-all duration-300 ease-in-out"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className="text-white group-hover:text-white transition-colors duration-300" />
                 </a>
-                <a href="https://wa.me/+201005138370" target="_blank" rel="noopener noreferrer">
-                  <div className="w-[40px] h-[40px] bg-tertiary rounded-xl flex justify-center items-center cursor-pointer shadow-[#915eff] shadow-md transition-all duration-300 ease-in-out">
-                    <FontAwesomeIcon icon={faWhatsapp} className="text-green-500" />
-                  </div>
+                <a
+                  href="https://wa.me/+201005138370"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-12 h-12 bg-tertiary border border-white/5 rounded-2xl flex justify-center items-center cursor-pointer hover:bg-[#25d366] hover:border-[#25d366] hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all duration-300 ease-in-out"
+                >
+                  <FontAwesomeIcon icon={faWhatsapp} className="text-white group-hover:text-white transition-colors duration-300" />
                 </a>
               </div>
-              <a href="https://drive.google.com/file/d/1cXymcre-yc2ciCrpZwJItHxS07esUDJd/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <div className="w-[150px] h-[60px] bg-tertiary rounded-xl flex justify-between items-center cursor-pointer shadow-[#915eff] px-3 shadow-md transition-all duration-300 ease-in-out">
-                  <p className="text-[40px] font-bold hover:text-[#915eff] hover:scale-110 duration-200 ">CV</p>
-                  <a href="/public/Mohamed Zaher (CV).pdf" download="Mohamed Zaher (CV).pdf" className="border-l-2 pl-3">
-                    <FontAwesomeIcon icon={faDownload} className="hover:text-[#915eff] hover:scale-110 text-[28px] duration-200" />
-                  </a>
-                </div>
-              </a>
+
+              {/* CV Action Buttons */}
+              <div className="flex gap-3 items-center">
+                {/* View CV */}
+                <a
+                  href="https://drive.google.com/file/d/1cXymcre-yc2ciCrpZwJItHxS07esUDJd/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-2xl hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] transition-all duration-300 ease-in-out cursor-pointer text-[15px] tracking-wide"
+                >
+                  <span>View CV</span>
+                </a>
+
+                {/* Download CV */}
+                <a
+                  href="/mohamed-zaher-cv.pdf"
+                  download="Mohamed-Zaher-CV.pdf"
+                  className="group flex items-center justify-center w-12 h-12 bg-tertiary border border-white/5 hover:border-violet-500/30 rounded-2xl hover:bg-white/5 transition-all duration-300 ease-in-out cursor-pointer"
+                  title="Download CV"
+                >
+                  <FontAwesomeIcon icon={faDownload} className="text-secondary group-hover:text-white transition-colors duration-300 text-[18px]" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

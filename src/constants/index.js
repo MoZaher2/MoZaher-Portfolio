@@ -15,6 +15,25 @@ import {
   mongodb,
   git,
   figma,
+  zustand,
+  reactquery,
+  shadcn,
+  framer,
+  express,
+  mysql,
+  postgresql,
+  nextauth,
+  jwt,
+  jest,
+  rtl,
+  eslint,
+  prettier,
+  docker,
+  githubactions,
+  vercel,
+  github,
+  postman,
+  npm,
   fci,
   iti,
   depi,
@@ -28,20 +47,21 @@ import {
   varnda,
   gymgenius,
   crypto_radar,
+  ai_resume_analyzer,
 } from "../assets";
 
 export const navLinks = [
   {
     id: "about",
-    title: "About",
-  },
-  {
-    id: "education",
-    title: "Education",
+    title: "Overview",
   },
   {
     id: "projects",
     title: "Projects",
+  },
+  {
+    id: "education",
+    title: "Education",
   },
   {
     id: "contact",
@@ -51,75 +71,111 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
-    describe: "Building responsive and modern user interfaces using React.js, HTML, CSS, and JavaScript.",
+    title: "Frontend Development",
+    describe:
+      "Creating fast, responsive, and modern web interfaces using React.js, Next.js, JavaScript, HTML, and CSS.",
     icon: web,
   },
   {
-    title: "React Developer",
-    describe: "Developing dynamic single-page applications using React, hooks, and modern frontend tools.",
-    icon: mobile,
-  },
-  {
-    title: "MERN Stack Developer",
-    describe: "Building full-stack web applications using MongoDB, Express.js, React, and Node.js.",
+    title: "Full Stack Development",
+    describe:
+      "Building scalable full-stack web applications using the MERN stack with clean architecture and REST APIs.",
     icon: backend,
   },
   {
-    title: "API Integration",
-    describe: "Connecting frontend applications with REST APIs and handling data efficiently.",
+    title: "UI/UX Implementation",
+    describe:
+      "Transforming Figma and modern UI designs into interactive, user-friendly, and fully responsive websites.",
+    icon: mobile,
+  },
+  {
+    title: "API & Backend Integration",
+    describe:
+      "Integrating frontend applications with REST APIs, authentication systems, databases, and third-party services.",
     icon: creator,
   },
 ];
 
-const technologies = [
+const techSections = [
   {
-    name: "HTML 5",
-    icon: html,
+    title: "Frontend",
+    items: [
+      { name: "HTML5", icon: html },
+      { name: "CSS3", icon: css },
+      { name: "JavaScript", icon: javascript },
+      { name: "TypeScript", icon: typescript },
+      { name: "React.js", icon: reactjs },
+      { name: "Next.js", icon: nextjs },
+    ],
   },
   {
-    name: "CSS 3",
-    icon: css,
+    title: "UI & Styling",
+    items: [
+      {
+        name: "Tailwind CSS",
+        icon: tailwind,
+      },
+      {
+        name: "shadcn/ui",
+        icon: shadcn,
+      },
+      {
+        name: "Framer Motion",
+        icon: framer,
+      },
+    ],
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    title: "Backend & Databases",
+    items: [
+      { name: "Node.js", icon: nodejs },
+      { name: "Express.js", icon: express },
+      { name: "MongoDB", icon: mongodb },
+      { name: "MySQL", icon: mysql },
+      { name: "PostgreSQL", icon: postgresql },
+    ],
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    title: "State Management",
+    items: [
+      { name: "Redux Toolkit", icon: redux },
+      { name: "Zustand", icon: zustand },
+      { name: "TanStack Query", icon: reactquery },
+    ],
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    title: "DevOps & Deployment",
+    items: [
+      { name: "Docker", icon: docker },
+      { name: "GitHub Actions", icon: githubactions },
+      { name: "Vercel", icon: vercel },
+      { name: "GitHub", icon: github },
+    ],
   },
   {
-    name: "Next JS",
-    icon: nextjs,
+    title: "Testing",
+    items: [
+      { name: "Jest", icon: jest },
+      { name: "React Testing", icon: rtl },
+      { name: "ESLint", icon: eslint },
+      { name: "Prettier", icon: prettier },
+    ],
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    title: "Auth & Security",
+    items: [
+      { name: "NextAuth.js", icon: nextauth },
+      { name: "JWT", icon: jwt },
+    ],
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
+    title: "Tools",
+    items: [
+      { name: "Postman", icon: postman },
+      { name: "Figma", icon: figma },
+      { name: "npm", icon: npm },
+      { name: "Git", icon: git },
+    ],
   },
 ];
 
@@ -172,8 +228,43 @@ const experiences = [
 
 const projects = [
   {
+    name: "AI Resume Analyzer",
+    description:
+      "AI-powered Resume Analyzer & Resume Improver built with Next.js and Google Gemini AI. Analyze resumes, improve CVs, generate interview questions, and export professional PDFs.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Gemini-API",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Shadcn",
+        color: "text-gray-200"
+      },
+      {
+        name: "Tailwind-CSS",
+        color: "green-text-gradient"
+      },
+      {
+        name: "Framer-Motion",
+        color: "blue-text-gradient"
+      }
+    ],
+    image: ai_resume_analyzer,
+    source_code_link: "https://github.com/MoZaher2/ai-resume-analyzer",
+    live_demo_link: "https://ai-resume-analyzer-beryl-theta.vercel.app/",
+  },
+  {
     name: "Crypto Radar",
-    description:"A responsive crypto tracking app built with React, Vite, and TypeScript. It fetches real-time data from the CoinGecko API with pagination, search functionality, and a clean user interface for smooth browsing.",
+    description:
+      "A responsive crypto tracking app built with React, Vite, and TypeScript. It fetches real-time data from the CoinGecko API with pagination, search functionality, and a clean user interface for smooth browsing.",
     tags: [
       {
         name: "react-vite",
@@ -183,15 +274,19 @@ const projects = [
         name: "TypeScript",
         color: "blue-text-gradient",
       },
-      
+      {
+        name:"Native-CSS",
+        color:"text-gray-200"
+      }
     ],
     image: crypto_radar,
     source_code_link: "https://github.com/MoZaher2/crypto-coins",
     live_demo_link: "https://crypto-coins-three.vercel.app/",
   },
   {
-    name: "Varnda",
-    description:"The project was created using the react and bootstrap frameworks and contains pages to publish your property, browse other real estate ads, articles about real estate, and a dashboard to manage the entire site.",
+    name: "Varnda Real Estate",
+    description:
+      "The project was created using the react and bootstrap frameworks and contains pages to publish your property, browse other real estate ads, articles about real estate, and a dashboard to manage the entire site.",
     tags: [
       {
         name: "react",
@@ -216,7 +311,8 @@ const projects = [
   },
   {
     name: "GymGenius",
-    description:"A comprehensive gym management website featuring a dynamic home page, a registration page for training plans, and a robust admin dashboard to monitor subscribers' progress and manage their training schedules. The platform is enhanced with a chatbot for instant assistance.",
+    description:
+      "A comprehensive gym management website featuring a dynamic home page, a registration page for training plans, and a robust admin dashboard to monitor subscribers' progress and manage their training schedules. The platform is enhanced with a chatbot for instant assistance.",
     tags: [
       {
         name: "Next js",
@@ -237,7 +333,8 @@ const projects = [
   },
   {
     name: "Teacher portfolio",
-    description:"This online profile is designed with a responsive user interface, utilizing Framer Motion and tailwind for smooth animations and an enhanced user experience.",
+    description:
+      "This online profile is designed with a responsive user interface, utilizing Framer Motion and tailwind for smooth animations and an enhanced user experience.",
     tags: [
       {
         name: "react-vite",
@@ -258,7 +355,8 @@ const projects = [
   },
   {
     name: "ToDo",
-    description:"Todo built with Bootstrap and Material UI. It enables users to manage daily tasks with features such as adding, editing, and deleting tasks. The app utilizes LocalStorage to ensure data persistence.",
+    description:
+      "Todo built with Bootstrap and Material UI. It enables users to manage daily tasks with features such as adding, editing, and deleting tasks. The app utilizes LocalStorage to ensure data persistence.",
     tags: [
       {
         name: "react-vite",
@@ -327,7 +425,8 @@ const projects = [
   },
   {
     name: "ProfileTemplete",
-    description:"Mo Zaher Studio is a modern and clean one‑page website template showcasing design and digital services, with sections for services, portfolio, about, and contact.",
+    description:
+      "Mo Zaher Studio is a modern and clean one‑page website template showcasing design and digital services, with sections for services, portfolio, about, and contact.",
     tags: [
       {
         name: "HTML",
@@ -344,7 +443,8 @@ const projects = [
   },
   {
     name: "Kasper Templete",
-    description:"Kasper Template is a clean, responsive one-page HTML/CSS template for portfolios or small businesses, featuring sections for services, gallery, testimonials, and contact",
+    description:
+      "Kasper Template is a clean, responsive one-page HTML/CSS template for portfolios or small businesses, featuring sections for services, gallery, testimonials, and contact",
     tags: [
       {
         name: "HTML",
@@ -383,4 +483,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, experiences, projects,techSections };
